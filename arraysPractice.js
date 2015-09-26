@@ -158,12 +158,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
-
+  function removeItem(list,ritem){
+    var position = list.indexOf(ritem);
+    if (position > -1){
+      list.splice(position, 1);
+      return list;
+    }
+  }
+  document.write("<br />");
+  document.write(removeItem(myGroceryList,"chips"));
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
-
-
+  function addItem(list,additem){
+    list.push(addItem);
+    return list;
+  }
+  document.write("<br />");
+  document.write(addItem(myGroceryList, 'Jerky'));
 //Next Problem
 
 
@@ -172,7 +184,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
-
+ function maker(){
+  var t = [];
+  for (var i=1; i<=215; i++){
+    t.push(i);
+  }
+  return t;
+ }
+document.write("<br />");
+document.write(maker());
 
 //Next Problem
 
@@ -183,8 +203,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 
-
-
+  function addTen(a){
+    for (var i=0; i<a.length; i++){
+      a[i] = (parseInt(a[i]) + 10);
+    }
+    return a;
+  }
+  document.write("<br />");
+  document.write(addTen(numbers));
 //Next Problem
 
 
@@ -203,8 +229,16 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
-
-
+  function check (arr1,arr2){
+    if(arr1.length>arr2.length){
+      return arr1;
+    }
+    if (arr1.length<arr2.length){
+      return arr2;
+    }
+  }
+  document.write("<br />");
+  document.write(check(arr1,arr2));
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
   'both' should return a new array full of numbers that are found in both arr1 and arr2.
